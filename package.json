@@ -1,5 +1,5 @@
 {
-  "name": "SoundVolumeView",
+  "name": "soundvolumeview-node",
   "version": "0.0.1",
   "description": "Perform tasks using the SoundVolumeView.exe utility.",
   "license": "MIT",
