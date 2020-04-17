@@ -1,13 +1,10 @@
 #!/usr/bin/env node
 'use strict';
 var meow = require('meow');
-var nircmd = require('./');
+var soundvolumeview = require('./');
 
 var cli = meow({
 	help: [
-		'Examples',
-		'  $ nircmd killprocess firefox.exe',
-		'  $ nircmd clipboard set github.com'
 	]
 });
 
@@ -16,4 +13,4 @@ if (!cli.input.length) {
 	process.exit(1);
 }
 
-nircmd(cli.input).then(console.log);
+soundvolumeview(cli.input).then(console.log);
