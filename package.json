@@ -1,0 +1,24 @@
+{
+  "name": "SoundVolumeView",
+  "version": "0.0.1",
+  "description": "Perform tasks using the SoundVolumeView.exe utility.",
+  "license": "MIT",
+  "repository": "",
+  "author": {
+    "name": "gillstrom Modified by: MrTylerjet",
+  },
+  "bin": "cli.js",
+  "engines": {
+    "node": ">=0.10.0"
+  },
+  "files": [
+    "cli.js",
+    "index.js",
+    "SoundVolumeView.exe"
+  ],
+  "dependencies": {
+    "meow": "^3.4.1",
+    "multi-typeof": "^1.0.0",
+    "pinkie-promise": "^1.0.0"
+  }
+}
