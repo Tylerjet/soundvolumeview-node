@@ -5,7 +5,7 @@
   "license": "MIT",
   "repository": "",
   "author": {
-    "name": "gillstrom Modified by: MrTylerjet",
+    "name": "gillstrom Modified by: MrTylerjet"
   },
   "bin": "cli.js",
   "engines": {
