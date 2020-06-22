@@ -18,7 +18,6 @@
   ],
   "dependencies": {
     "meow": "^3.4.1",
-    "multi-typeof": "^1.0.0",
-    "pinkie-promise": "^1.0.0"
+    "multi-typeof": "^1.0.0"
   }
 }
