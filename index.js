@@ -27,5 +27,5 @@ module.exports = function (input, opts) {
 		throw new Error('Only Windows systems are supported');
 	}
 
-	return spawn(path.join(__dirname, 'SoundVolumeView.exe'), checkInput(input), opts);
+	return spawn(path.join(require.main.path, 'SoundVolumeView.exe'), checkInput(input), opts);
 };
