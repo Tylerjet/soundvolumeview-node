@@ -26,6 +26,6 @@ module.exports = function (input, opts) {
 	if (process.platform !== 'win32') {
 		throw new Error('Only Windows systems are supported');
 	}
-
+	console.log("From SVV: "+require.main.path)
 	return spawn(path.join(require.main.path, 'SoundVolumeView.exe'), checkInput(input), opts);
-};
+}
