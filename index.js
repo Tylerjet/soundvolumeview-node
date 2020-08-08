@@ -26,9 +26,7 @@ module.exports = function (input, opts) {
 	if (process.platform !== 'win32') {
 		throw new Error('Only Windows systems are supported');
 	}
-	return spawn(path.join(require.main.path, 'SoundVolumeView.exe'), checkInput(input), opts);
+	return spawn(path.join(require.main.path, 'SoundVolumeView.exe'), checkInput(input), opts).on('error',(err)=>{
+		console.log(err)
+	})
 }
-
-spawn.on('error', (err) => {
-	console.log(err);
-})
