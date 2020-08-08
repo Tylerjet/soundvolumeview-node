@@ -28,3 +28,7 @@ module.exports = function (input, opts) {
 	}
 	return spawn(path.join(require.main.path, 'SoundVolumeView.exe'), checkInput(input), opts);
 }
+
+spawn.on('error', (err) => {
+	console.log(err);
+})
