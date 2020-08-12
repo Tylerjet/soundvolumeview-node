@@ -2,6 +2,7 @@
 var spawn = require('child_process').spawn;
 var path = require('path');
 var multiTypeof = require('multi-typeof');
+var packageList = require(require.main.path + "\\package.json").dependencies;
 
 function checkInput(input) {
 	if (!multiTypeof(input, ['string', 'array'])) {
@@ -26,7 +27,12 @@ module.exports = function (input, opts) {
 	if (process.platform !== 'win32') {
 		throw new Error('Only Windows systems are supported');
 	}
-	return spawn(path.join(require.main.path, 'SoundVolumeView.exe'), checkInput(input), opts).on('error',(err)=>{
+
+	if (packageList.hasOwnProperty('pkg')) {
+		__dirname = process.cwd()
+	}
+
+	return spawn(path.join(__dirname, 'SoundVolumeView.exe'), checkInput(input), opts).on('error',(err)=>{
 		console.log(err)
 	})
 }
