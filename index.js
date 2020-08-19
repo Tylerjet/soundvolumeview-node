@@ -2,7 +2,7 @@
 var spawn = require('child_process').spawn;
 var path = require('path');
 var multiTypeof = require('multi-typeof');
-var packageList = require(require.main.path + "\\package.json").dependencies;
+
 
 function checkInput(input) {
 	if (!multiTypeof(input, ['string', 'array'])) {
@@ -28,7 +28,7 @@ module.exports = function (input, opts) {
 		throw new Error('Only Windows systems are supported');
 	}
 
-	if (packageList.hasOwnProperty('pkg')) {
+	if (process.pkg) {
 		__dirname = process.cwd()
 	}
 
